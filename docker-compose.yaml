@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  firebase:
+    container_name: firebase
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: 18.13.0
+    ports:
+      - 9099:9099
+      - 4000:4000
+    restart: always
